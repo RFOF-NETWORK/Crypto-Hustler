@@ -3,48 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rfof-bitcoin.org: Comprehensive Blockchain System</title>
+    <title>rfof-bitcoin.org: Crypto-Hustler - Blockchain & Bitcoin Concepts</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="menu_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* General body and container styles for light theme */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #FFFFFF; /* White background */
-            color: #333333; /* Dark text */
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden; /* Prevent horizontal scroll */
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header Specific Styles */
-        .main-header {
-            background-color: #FFFFFF; /* White header background */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow */
-            padding: 10px 0; /* Vertical padding */
-            z-index: 100;
-            position: relative;
-            border-bottom: 1px solid #E0E0E0; /* Light gray border */
-        }
-        .header-content {
-            max-width: 960px; /* Constrain header content to align with main content */
-            margin: 0 auto; /* Center the header content */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px; /* Horizontal padding */
-            box-sizing: border-box;
-            width: 100%;
-        }
-        .site-title { /* Text title in the header */
+        /* Specific styles for rfof-bitcoin.org, building on global styles */
+        .site-title {
             color: #0088cc; /* Telegram/TON Blue */
             font-family: 'Orbitron', sans-serif;
-            font-size: 2.2em; /* Adjusted font size for this repo's title length */
+            font-size: 2.2em; /* Adjusted for repo's title length */
             font-weight: bold;
             margin: 0;
             padding: 0;
@@ -59,14 +27,14 @@
 
         /* Hero Section Styling */
         .hero-section {
-            background-image: linear-gradient(to bottom right, #0088cc, #005f8f); /* Blue gradient */
-            color: #ffffff;
+            background-image: linear-gradient(to bottom right, #FFD700, #DAA520); /* Gold gradient for Bitcoin theme */
+            color: #333333; /* Dark text for contrast on gold */
             padding: 80px 20px;
             text-align: center;
             position: relative;
             overflow: hidden;
-            border-bottom: 2px solid #005f8f;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid #FFD700;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         .hero-section::before {
             content: '';
@@ -75,34 +43,28 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('https://raw.githubusercontent.com/RFOF-NETWORK/RFOF-NETWORK.github.io/main/assets/rfoff_network_hero_background.jpg') no-repeat center center/cover; /* Placeholder hero background */
-            opacity: 0.15;
+            background: url('https://raw.githubusercontent.com/RFOF-NETWORK/RFOF-NETWORK.github.io/main/assets/bitcoin_hero_background.jpg') no-repeat center center/cover; /* Bitcoin-themed background */
+            opacity: 0.1;
             z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-            box-sizing: border-box;
         }
         .hero-content h1 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 3.2em;
+            font-size: 3.5em;
             margin-bottom: 0.5em;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            color: #333; /* Darker heading for readability on gold */
         }
         .hero-content p {
-            font-size: 1.2em;
+            font-size: 1.3em;
             line-height: 1.5;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 1.5em;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
             word-wrap: break-word;
+            color: #555; /* Darker text for readability */
         }
         .hero-content .btn-primary {
-            background-color: #0088cc;
+            background-color: #DAA520; /* Gold button */
             color: white;
             padding: 12px 25px;
             text-decoration: none;
@@ -111,93 +73,49 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .hero-content .btn-primary:hover {
-            background-color: #00aaff;
+            background-color: #FFD700;
             transform: translateY(-2px);
         }
 
-        /* Content Sections Styling */
-        .content-container {
-            max-width: 960px;
-            margin: 2rem auto;
-            padding: 2.5rem;
-            background-color: #ffffff; /* White background for content blocks */
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            box-sizing: border-box;
-            flex-grow: 1;
-        }
+        /* General section titles consistent with rfof-bitcoin.org theme */
         .section-title {
-            color: #0088cc; /* Telegram/TON Blue */
+            color: #0088cc; /* Telegram/TON Blue for consistency */
             font-family: 'Orbitron', sans-serif;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid rgba(0, 136, 204, 0.5); /* Blue underline with transparency */
+            text-shadow: none;
+            border-bottom-color: rgba(0, 136, 204, 0.5);
         }
         .content-highlight {
-            color: #555; /* Darker grey for content highlights on white background */
+            color: #555555; /* Darker grey for content highlights on white background */
             font-style: italic;
             font-weight: bold;
         }
 
-        /* Tables and code blocks (re-using general styles from styles.css) */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 1.5em;
-            font-size: 0.95em;
-            background-color: #f8f8f8;
-            color: #333;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-radius: 6px;
-            overflow: hidden; /* Ensures borders/shadows are within radius */
-        }
-        th, td {
-            border: 1px solid #e0e0e0;
-            padding: 12px 15px;
-            text-align: left;
-        }
-        th {
-            background-color: #0088cc; /* Telegram blue for table headers */
+        /* Specific styling for the PRAI Chatbox Portal Link */
+        .praiai-portal-link {
+            display: inline-block;
+            background-color: #0088cc; /* Telegram Blue */
             color: white;
+            padding: 15px 30px;
+            margin: 20px auto;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.2em;
             font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.9em;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 136, 204, 0.4);
+            text-align: center;
         }
-        tr:nth-child(even) {
-            background-color: #f0f0f0; /* Slightly different background for even rows */
+        .praiai-portal-link:hover {
+            background-color: #00aaff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 136, 204, 0.6);
         }
-        tr:hover {
-            background-color: #e6f7ff; /* Light blue on row hover */
-        }
-        pre {
-            background-color: #f8f8f8; /* Light background for code */
-            color: #333; /* Darker text for code */
-            padding: 1.2em;
-            border-radius: 6px;
-            overflow-x: auto;
-            margin-bottom: 1.5em;
-            font-family: 'Fira Code', 'Cascadia Code', monospace;
-            font-size: 0.95em;
-            border: 1px solid #e0e0e0;
-            box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
-            white-space: pre-wrap;
-            word-break: break-all;
-        }
-        code {
-            background-color: #e0e0e0; /* Inline code background */
-            padding: 0.2em 0.4em;
-            border-radius: 3px;
-            font-family: 'Fira Code', 'Cascadia Code', monospace;
-            color: #0088cc; /* Blue for inline code */
-        }
-        ul code {
-            display: block;
-            white-space: pre-wrap;
-            margin-top: 0.5em;
-            background-color: #e0e0e0;
-            padding: 0.8em;
-            border-left: 3px solid #0088cc;
-            color: #333;
+        .praiai-portal-container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border-top: 1px dashed rgba(0, 136, 204, 0.15);
+            padding-top: 30px;
         }
     </style>
 </head>
@@ -212,11 +130,12 @@
                     <div class="bar"></div>
                 </div>
                 <ul class="nav-list" id="navLinks">
-                    <li><a href="https://rfof-network.github.io/" target="_blank">RFOFSpiderWeb.NET (Hauptseite)</a></li>
+                    <!-- Global Navigation Links (9 Repositories/Sites) -->
+                    <li><a href="https://rfof-network.github.io/" target="_blank">RFOFSpiderWeb.NET</a></li>
                     <li><a href="https://rfof-network-ready-for-our-future.github.io/RFOF-spider-NET-/" target="_blank">Ready Four Our Future</a></li>
                     <li><a href="https://qch-l-c.github.io/PRAI-KI-/" target="_blank">PRAI-OS</a></li>
                     <li><a href="https://rfof-network.github.io/RFOF-NETWORK/" target="_blank">RFOF-NETWORK</a></li>
-                    <li><a href="https://rfof-network.github.io/PRAI-/" target="_blank">RPFOF</a></li>
+                    <li><a href="https://rfof-network.github.io/PRAI-/#uebersicht" target="_blank">RPFOF</a></li>
                     <li><a href="https://rfof-network-ready-for-our-future.github.io/QCHC/" target="_blank">QCH-L-C</a></li>
                     <li><a href="https://rfof-network.github.io/Comprensive-rfof-bitcoin.org-PRAI-BOx-Blockchain-System_Programm-Fusions-Reactor-System/" target="_blank">rfof-bitcoin.org (Current)</a></li>
                     <li><a href="https://rfof-network.github.io/BUBATZ-COIN-official-CSC-DCV-/" target="_blank">Golden Times</a></li>
@@ -243,9 +162,11 @@
             <p class="content-highlight">
                 rfof-bitcoin.org offers a revolutionary platform that integrates advanced AI with blockchain technology to create a new paradigm of decentralized and intelligent ecosystems.
             </p>
-            <p class="content-highlight">
-                Explore the core of our AI: <a href="https://rfof-network.github.io/RFOF-NETWORK/" target="_blank" class="btn-primary">Access PRAI Chatbox & Sandbox</a>
-            </p>
+            <!-- Link/Portal to PRAI Chatbox -->
+            <div class="praiai-portal-container">
+                <p>Ready to interact with PRAI? Access our AI-powered Chatbox & Code Sandbox:</p>
+                <a href="https://rfof-network.github.io/RFOF-NETWORK/" target="_blank" class="praiai-portal-link">Access PRAI Chatbox & Sandbox</a>
+            </div>
         </section>
 
         <section id="features" class="text-content">
@@ -375,4 +296,4 @@
 
     <script src="menu_script.js"></script>
 </body>
-                                              </html>
+                </html>
